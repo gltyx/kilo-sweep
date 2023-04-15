@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>KiloSweep</title>
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <link href="minesweeper.css" rel="stylesheet" type="text/css" />
+    <script src="Mousetrap.js"></script>
+    <script src="minesweeper.js" defer></script>
+  </head>
+  <body>
+    <script src="chs.js"></script>
+    <script src="core.js"></script>
+    <div id="game">
+      <div id="header">
+        <img id="face" src="img/faceHappy.png" onclick="createGame()">
+        <div id="counterLeft">
+          <img class="number" src="img/Number0.png">
+          <img class="number" src="img/Number3.png">
+          <img class="number" src="img/Number0.png">
+        </div>
+        <div id="counterRight">
+          <img class="number" src="img/Number0.png">
+          <img class="number" src="img/Number0.png">
+          <img class="number" src="img/Number0.png">
+        </div>
+      </div>
+      <div id="minefield"></div>
+    </div>
+
+    <div style="width: 320px; background-color: rgba(0,0,0,0.3); padding: 4px; padding-bottom: 10px;">
+      <center><img src="img/icon.png" style="margin-top: 8px; width: 64px; filter: drop-shadow(0 0 6px #4444ff);">
+      <h1 style="color: #bbb; margin: 8px">KiloSweep</h1>
+      <p style="color: #bbb; margin: 8px">A difficult Minesweeper variation with multiple mines in one spot.</p></center><br>
+      <label for="scale" style="color: white">Scale:</label>
+      <input type="number" min="1" max="4" value="1" id="scale" name="scale" style="width: 50px"><br>
+      <hr>
+      <label for="noOfMines" style="color: white">Number of mines:</label>
+      <input type="number" min="1" max="100" value="20" id="noOfMines" name="noOfMines" style="width: 50px"><br>
+      <label for="noOfDoubleMines" style="color: white">Number of double mines:</label>
+      <input type="number" min="0" max="100" value="10" id="noOfDoubleMines" name="noOfDoubleMines" style="width: 50px"><br>
+      <hr>
+      <center><p style="color: #bbb; margin: 8px">Best time: <a id="bestTime">N/A</a></p>
+      <button onclick="resetBestTime()">Reset best time</button></center>
+    </div>
+
+    <img src="img/TileUnclicked.png" style="display: none">
+    <img src="img/TileClicked.png" style="display: none">
+    <img src="img/TileMine.png" style="display: none">
+    <img src="img/TileMineHit.png" style="display: none">
+    <img src="img/TileMine2.png" style="display: none">
+    <img src="img/TileMine2Hit.png" style="display: none">
+    <img src="img/TileMineCross.png" style="display: none">
+    <img src="img/TileFlag.png" style="display: none">
+    <img src="img/TileFlag2.png" style="display: none">
+    <img src="img/TileQuestionMark.png" style="display: none">
+    <img src="img/Tile1.png" style="display: none">
+    <img src="img/Tile2.png" style="display: none">
+    <img src="img/Tile3.png" style="display: none">
+    <img src="img/Tile4.png" style="display: none">
+    <img src="img/Tile5.png" style="display: none">
+    <img src="img/Tile6.png" style="display: none">
+    <img src="img/Tile7.png" style="display: none">
+    <img src="img/Tile8.png" style="display: none">
+    <img src="img/Tile9.png" style="display: none">
+    <img src="img/Tile10.png" style="display: none">
+    <img src="img/Tile11.png" style="display: none">
+    <img src="img/Tile12.png" style="display: none">
+    <img src="img/Tile13.png" style="display: none">
+    <img src="img/Tile14.png" style="display: none">
+    <img src="img/Tile15.png" style="display: none">
+    <img src="img/Tile16.png" style="display: none">
+    <img src="img/faceHappy.png" style="display: none">
+    <img src="img/faceHappyClicked.png" style="display: none">
+    <img src="img/faceDead.png" style="display: none">
+    <img src="img/faceSunglasses.png" style="display: none">
+    <img src="img/NumberBlank.png" style="display: none">
+    <img src="img/Number0.png" style="display: none">
+    <img src="img/Number1.png" style="display: none">
+    <img src="img/Number2.png" style="display: none">
+    <img src="img/Number3.png" style="display: none">
+    <img src="img/Number4.png" style="display: none">
+    <img src="img/Number5.png" style="display: none">
+    <img src="img/Number6.png" style="display: none">
+    <img src="img/Number7.png" style="display: none">
+    <img src="img/Number8.png" style="display: none">
+    <img src="img/Number9.png" style="display: none">
+<!--客服 开始-->
+<script src="//g8hh.github.io/static/js/jquery.min.js"></script>
+<link rel="stylesheet" href="//g8hh.github.io/static/css/kf.css" type="text/css" media="screen" charset="utf-8">
+<script src="//g8hh.github.io/static/js/kf.js"></script>
+<!-- 客服 结束 -->
+<!--站长统计-->
+    <div style="display: none">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6581389daf4dd6fe7dbb4d20fdcb52a6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    </div>
+  </body>
+</html>

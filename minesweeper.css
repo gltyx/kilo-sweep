@@ -1,0 +1,103 @@
+@font-face{
+    font-family:"Pixelated MS Sans Serif";
+    font-style:normal;
+    font-weight:400;
+    src:url(fonts/ms_sans_serif.woff) format("woff");
+    src:url(fonts/ms_sans_serif.woff2) format("woff2")
+}
+@font-face{
+    font-family:"Pixelated MS Sans Serif";
+    font-style:normal;
+    font-weight:700;
+    src:url(fonts/ms_sans_serif_bold.woff) format("woff");
+    src:url(fonts/ms_sans_serif_bold.woff2) format("woff2")
+}
+@font-face{
+    font-family:"Alagard";
+    font-style:normal;
+    font-weight:700;
+    src:url(fonts/alagard.woff) format("woff");
+}
+@font-face{
+    font-family:"VCR OSD MONO";
+    font-style:normal;
+    font-weight:700;
+    src:url(fonts/VCR_OSD_MONO.woff) format("woff");
+}
+
+body {
+  background-image: linear-gradient(to right, #808, #088);
+  user-select: none;
+  image-rendering: pixelated;
+  font-family: "Pixelated MS Sans Serif", Arial;
+  font-size: 24px;
+}
+
+#game {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #666;
+  border: 3px outset ;
+}
+
+#header {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  height: 32px;
+  border: 2px inset;
+}
+
+#face {
+  position: absolute;
+  top: 3px;
+  border: 1px solid #808080;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#face:active {
+  content:url("img/faceHappyClicked.png");
+}
+
+#counterLeft {
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  border: 1px inset;
+}
+
+#counterRight {
+  position: absolute;
+  top: 3px;
+  right: 4px;
+  border: 1px inset;
+}
+
+.number {
+  display: block;
+  float: left;
+}
+
+#minefield {
+  position: absolute;
+  top: 48px;
+  left: 6px;
+  border: 3px inset;
+  background-image: linear-gradient(135deg, #e2e, #2ee);
+}
+
+input {
+  font-family: "Pixelated MS Sans Serif", Arial;
+  font-size: 24px;
+}
+
+button {
+  font-family: "Pixelated MS Sans Serif", Arial;
+  font-size: 24px;
+  color: #ccc;
+  background-color: #666;
+  border: 3px outset ;
+}
